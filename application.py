@@ -1,4 +1,7 @@
+from flask import Flask
 from app import app
+
+application = Flask(__name__)
 
 # run the app.
 if __name__ == "__main__":
