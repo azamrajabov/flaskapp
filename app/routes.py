@@ -17,11 +17,11 @@ def index():
     posts = [
         {
             'author': {'username': 'John'},
-            'body': app.config['SECRET_KEY']
+            'body': 'Beautiful day in Portland!'
         },
         {
             'author': {'username': 'Susan'},
-            'body': app.config['SQLALCHEMY_DATABASE_URI']
+            'body': 'The Avengers movie was so cool!'
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
