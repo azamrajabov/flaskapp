@@ -1,0 +1,6 @@
+html,body {
+    height: 100%;
+}
+.sendpackage .form-group label {
+    display: none;
+}
