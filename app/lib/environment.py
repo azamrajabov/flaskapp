@@ -4,10 +4,10 @@ def get_rds_credentials():
     if not os.environ.get('rds_endpoint', None):
         return None
     return {
-        'host': os.environ['rds_endpoint'],
-        'username': os.environ['rds_username'],
-        'password': os.environ['rds_password'],
-        'db': os.environ['rds_db']
+        'host': os.environ['RDS_ENDPOINT'],
+        'username': os.environ['RDS_USERNAME'],
+        'password': os.environ['RDS_PASSWORD'],
+        'db': os.environ['RDS_DB']
     }
 
 def get_secret_key():
