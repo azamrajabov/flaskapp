@@ -1,7 +1,7 @@
 import os
 
 def get_rds_credentials():
-    if not os.environ.get('rds_endpoint', None):
+    if not os.environ.get('RDS_ENDPOINT', None):
         return None
     return {
         'host': os.environ['RDS_ENDPOINT'],
