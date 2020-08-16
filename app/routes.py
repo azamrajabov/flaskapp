@@ -17,7 +17,7 @@ def index():
     posts = [
         {
             'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'body': app.config['SECRET_KEY']
         },
         {
             'author': {'username': 'Susan'},
