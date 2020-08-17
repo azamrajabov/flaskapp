@@ -8,3 +8,6 @@ $env:FLASK_ENV = "development"
 
 
 $env:FLASK_APP="application.py"
+
+>>> from app.models import User
+>>> u = User(username='susan', email='susan@example.com')
