@@ -189,10 +189,11 @@ def db_migration():
     # python manage.py db init
     # python manage.py db migrate
     # python manage.py db upgrade
-    output0 = subprocess.run(["python", "db_manager.py", "db", "init"],
+    output0 = subprocess.run(["flask", "db", "init"],
                     capture_output=True)
-    output1 = subprocess.run(["python", "db_manager.py", "db", "migrate"],
+    output1 = subprocess.run(["flask", "db", "migrate"],
                     capture_output=True)
-    output2 = subprocess.run(["python", "db_manager.py", "db", "upgrade"],
+    output2 = subprocess.run(["flask", "db", "upgrade"],
                     capture_output=True)
-    return '<pre>' + str(output0) + '<hr>' + str(output1) + '<hr>' + str(output2) +'</pre>'
+    return '<pre>' + '<hr>'.join(
+        [str(output0), str(output1), str(output2)]) +'</pre>'
