@@ -45,16 +45,6 @@ def index():
     return render_template("index.html", title='Home Page', form=form,
                            posts=posts)
 
-@app.route('/migration_upgrade')
-def migration_upgrade():
-    pass
-    # import subprocess
-    # out = subprocess.Popen(['python', '-m', 'flask', 'db migrate -m "db changes table"'], 
-    #        stdout=subprocess.PIPE, 
-    #        stderr=subprocess.STDOUT)
-    # stdout,stderr = out.communicate()
-    # return stdout
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -199,8 +189,10 @@ def db_migration():
     # python manage.py db init
     # python manage.py db migrate
     # python manage.py db upgrade
+    output0 = subprocess.run(["python", "db_manager.py", "db", "init"],
+                    capture_output=True)
     output1 = subprocess.run(["python", "db_manager.py", "db", "migrate"],
                     capture_output=True)
     output2 = subprocess.run(["python", "db_manager.py", "db", "upgrade"],
                     capture_output=True)
-    return '<pre>' + str(output1) + '<hr>' + str(output2) +'</pre>'
+    return '<pre>' + str(output0) + '<hr>' + str(output1) + '<hr>' + str(output2) +'</pre>'
