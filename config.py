@@ -24,5 +24,5 @@ class Config(object):
     MAIL_SERVER = 'localhost'
     MAIL_PORT = 8025
 
+    LANGUAGES = ['en', 'uz']
     POSTS_PER_PAGE = 5
-
