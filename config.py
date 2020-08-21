@@ -3,6 +3,7 @@ from app.lib import environment
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
+    FLASK_APP = 'application.py'
     SECRET_KEY = environment.get_secret_key() or 'you-will-never-guess-localhost'
     SQLALCHEMY_DATABASE_URI = environment.get_database_url() or \
         'mysql+pymysql://root:root@localhost/2gonyc'
@@ -25,4 +26,5 @@ class Config(object):
     MAIL_PORT = 8025
 
     LANGUAGES = ['en', 'uz']
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     POSTS_PER_PAGE = 5
