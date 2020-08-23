@@ -26,5 +26,5 @@ class Config(object):
     MAIL_PORT = 8025
 
     LANGUAGES = ['en', 'uz']
-    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY') or '958fe6a32e584d609d3328688399e3ae'
     POSTS_PER_PAGE = 5

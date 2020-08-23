@@ -21,6 +21,6 @@ flask translate update
 compile lang
 flask translate compile
 
-
+$env:MS_TRANSLATOR_KEY = "958fe6a32e584d609d3328688399e3ae"
 958fe6a32e584d609d3328688399e3ae
 fb4ee0efdf8c460193326dbc2f16f9a1

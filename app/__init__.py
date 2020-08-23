@@ -28,13 +28,18 @@ mail = Mail(app)
 moment = Moment(app)
 babel = Babel(app)
 
+# blueprints
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
+
 
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
-    #return 'uz'
+    # return 'uz'
 
-from app import routes, models, errors
+from app import routes, models
 
 if not app.debug:
     pass

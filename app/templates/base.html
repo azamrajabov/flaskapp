@@ -3,6 +3,9 @@
 {% block title %}
     {% if title %}{{ title }} - 2Go NYC{% else %}{{ _('Welcome to 2Go.NYC') }}{% endif %}
 {% endblock %}
+{%- block metas %}
+<meta http-equiv="content-language" content="uz">
+{%- endblock metas %}
 
 {% block navbar %}
     <nav class="navbar navbar-default">

@@ -13,9 +13,9 @@
             {% endset %}
             {{ _('%(username)s said %(when)s',
             username=user_link, when=moment(post.timestamp).fromNow()) }}
+            <span>{{ post.language }}</span>
             <br>
             <span id="post{{ post.id }}">{{ post.body }}</span>
-            <span>{{ post.language }}</span>
             {% if post.language and post.language != g.locale %}
             <br><br>
             <span id="translation{{ post.id }}">
